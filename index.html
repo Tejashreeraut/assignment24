@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 10px;
+            height: 300px;
+            width: 400px;
+            margin: 50px auto;
+            background-color: rgb(239, 229, 217);
+        }
+        .container-img {
+            height:150px;
+            width: 70;
+            display: block;
+            margin: 10px auto;
+            background-color: rgb(239, 229, 217);
+        }
+        .heading {
+            text-align: center;
+        }
+        .quantity-inc-dec {
+            display: flex;
+            
+            justify-content: space-around;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="img.pro/sound.jpg"  class="container-img">
+        <p class="heading"> Portronics SoundDrum 1 10W TWS Portable & Type C Charging 10 W Bluetooth Speaker  (Black, Mono Channel)</p>
+
+        <div class="quantity-inc-dec">
+            <button style="background-color: aqua;" type="button" onclick="decincquantity('dec')">
+                -
+            </button>
+            <span id="quantity">1</span>
+            <button   type ="button" onclick="decincquantity('inc')" style="background-color: aqua;">
+                +
+            </button>
+        </div>
+    </div>
+
+    <script>
+         const quantityElement = document.getElementById("quantity");
+        let quantity = parseInt(quantityElement.innerText);
+
+        function decincquantity(op) {
+
+            if (quantity == 1 && op == "dec")
+                return
+
+            if (quantity == 10 && op == "inc")
+            
+                return
+
+         quantityElement.innerText = op ==='inc' ? ++ quantity : --quantity;
+        }
+    </script>
+    
+</body>
+</html>
