@@ -3,66 +3,71 @@
 <head>
     <title>Document</title>
     <style>
+        body
+        {
+            background-color:#205781;
+        }
         .container {
-            border: 1px solid black;
+            border: 3px solid rgb(246, 242, 242);
             border-radius: 15px;
             padding: 10px;
-            height: 300px;
-            width: 400px;
+            height:350px;
+            width: 450px;
             margin: 50px auto;
-            background-color: rgb(239, 229, 217);
+            background-color:#98D2C0;
         }
         .container-img {
-            height:150px;
-            width: 70;
+            height:190px;
+            width:190px;
             display: block;
             margin: 10px auto;
-            background-color: rgb(239, 229, 217);
+            background-color: #F6F8D5;
         }
         .heading {
             text-align: center;
         }
         .quantity-inc-dec {
             display: flex;
-            
+
+        }
+        .quantity-inc-dec
+        {
+            color: rgb(6, 6, 6);
+            height:35px;
+            width:300px;
+            padding:3px;
+            margin-left:190px;
             justify-content: space-around;
-            
+            font-size:28px;
+            margin:20px;
+            padding-left:60px;
         }
     </style>
 </head>
-
 <body>
+    <h1></h1>
     <div class="container">
-        <img src="img.pro/sound.jpg"  class="container-img">
-        <p class="heading"> Portronics SoundDrum 1 10W TWS Portable & Type C Charging 10 W Bluetooth Speaker  (Black, Mono Channel)</p>
+        <img src="C:\Users\tejas\OneDrive\Desktop\assignment24\assignment24\stack-of-books.png"  class="container-img">
+        <h1 class="heading">“A room without books is like a body without a soul.”</h1>
 
         <div class="quantity-inc-dec">
-            <button style="background-color: aqua;" type="button" onclick="decincquantity('dec')">
-                -
-            </button>
+            <button style="background-color:#205781;" type="button" onclick="decincquantity('dec')"> - </button>
             <span id="quantity">1</span>
-            <button   type ="button" onclick="decincquantity('inc')" style="background-color: aqua;">
-                +
-            </button>
+            <button type ="button" onclick="decincquantity('inc')" style="background-color:#205781;"> + </button>
         </div>
     </div>
-
     <script>
          const quantityElement = document.getElementById("quantity");
-        let quantity = parseInt(quantityElement.innerText);
+         let quantity = parseInt(quantityElement.innerText);
 
-        function decincquantity(op) {
-
+        function decincquantity(op)
+         {
             if (quantity == 1 && op == "dec")
                 return
-
             if (quantity == 10 && op == "inc")
-            
                 return
-
          quantityElement.innerText = op ==='inc' ? ++ quantity : --quantity;
         }
     </script>
-    
 </body>
 </html>
